@@ -5,13 +5,13 @@
 	
 	<!-- maven specifc artifact grouping and versioning information -->
 	<groupId>com.ottogroup.bi.streaming.showcase</groupId>
-	<artifactId>word-count</artifactId>
+	<artifactId>log-producer</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
 	<!-- general project information, eg. name and description -->
-	<name>word-count</name>
-	<description>Word Count Example</description>
+	<name>log-producer</name>
+	<description>Log Producer Example</description>
 	<url>http://www.ottogroup.com</url>
 	<inceptionYear>2016</inceptionYear>
 
@@ -71,6 +71,7 @@
 	
 		<!-- test related dependencies -->		
 		<dependency>
+		
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
 			<version>1.10.19</version>
@@ -127,6 +128,13 @@
 		</dependency>
 		
 		<!-- end: test related dependencies -->
+
+		<dependency>
+			<groupId>org.schwering</groupId>
+			<artifactId>irclib</artifactId>
+			<version>1.10</version>
+		</dependency>
+
 
 		<!-- apache flink related libraries along with configurable flink & scala version -->
 		
@@ -335,7 +343,7 @@
 							<transformers>
 								<!-- add Main-Class to manifest file -->
 								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.ottogroup.bi.streaming.showcase.WordCountExampleTwo</mainClass>
+									<mainClass>com.ottogroup.bi.streaming.showcase.WikiLogProducer</mainClass>
 								</transformer>
 							</transformers>
 							<createDependencyReducedPom>false</createDependencyReducedPom>
@@ -352,7 +360,7 @@
 				<configuration>
 					<archive>
 						<manifestEntries>
-							<Main-Class>com.ottogroup.bi.streaming.showcase.WordCountExampleTwo</Main-Class>
+							<Main-Class>com.ottogroup.bi.streaming.showcase.WikiLogProducer</Main-Class>
 						</manifestEntries>
 					</archive>
 				</configuration>

@@ -5,13 +5,13 @@
 	
 	<!-- maven specifc artifact grouping and versioning information -->
 	<groupId>com.ottogroup.bi.streaming.showcase</groupId>
-	<artifactId>word-count</artifactId>
+	<artifactId>log-analysis</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
 	<!-- general project information, eg. name and description -->
-	<name>word-count</name>
-	<description>Word Count Example</description>
+	<name>log-analysis</name>
+	<description>Log Analysis Example</description>
 	<url>http://www.ottogroup.com</url>
 	<inceptionYear>2016</inceptionYear>
 
@@ -71,6 +71,7 @@
 	
 		<!-- test related dependencies -->		
 		<dependency>
+		
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
 			<version>1.10.19</version>
@@ -127,6 +128,13 @@
 		</dependency>
 		
 		<!-- end: test related dependencies -->
+
+		<dependency>
+			<groupId>org.schwering</groupId>
+			<artifactId>irclib</artifactId>
+			<version>1.10</version>
+		</dependency>
+
 
 		<!-- apache flink related libraries along with configurable flink & scala version -->
 		
